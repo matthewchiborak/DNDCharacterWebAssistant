@@ -1,0 +1,24 @@
+
+:root {
+	background-color: black;
+	color: red;
+}
+
+button {
+	background-color: black;
+	color: red;
+}
+
+input {
+	background-color: black;
+	color: red;
+}
+
+textarea {
+	background-color: black;
+	color: red;
+}
+
+hr {
+	border: 1px solid red
+}

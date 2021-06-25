@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, inital-scale=1.0">
+	<script src="dndcharacterfunctions.js"></script>
+	<link rel="stylesheet" href="dndcharactersheetstyle.css">
+	<title>DnD Character Assistant</title>
+</head>
+<body onload="initSheet()">
+	<header>
+		<h1>DND Character Sheet Assistant</h1>
+		<hr/>
+	</header>
+	<main>
+		<textarea type="text" id="rollBox"></textarea>
+		<hr/>
+		<h2>Duke Danger</h2>
+		<hr/>
+		<div id="generalStats">
+			<button type="button" onclick="rollInit()">Initiative</button>
+			HP: 
+			<input id="hpSpinBox" type="number" min="0" max="31">
+			Hit Die Current: 
+			<input id="hitDieSpinBox" type="number" min="0" max="7">
+			Hit Die To Use: 
+			<input id="hitDieToUseSpinBox" type="number" min="0" max="7">
+			<button type="button" onclick="rollHitDie()">Roll Hit Die</button>
+			<span>AC: 13</span>
+			<span>Speed: 30</span>
+		</div>
+		<hr/>
+		<h3>Saving Throws</h3>
+		<div id="savingThrowButtons">
+			<button type="button" onclick="saveThrowPressed(0)">Strength</button>
+			<button type="button" onclick="saveThrowPressed(1)">Dexterity</button>
+			<button type="button" onclick="saveThrowPressed(2)">Constitution</button>
+			<button type="button" onclick="saveThrowPressed(3)">Intelligence</button>
+			<button type="button" onclick="saveThrowPressed(4)">Wisdom</button>
+			<button type="button" onclick="saveThrowPressed(5)">Charisma</button>
+		</div>
+		<hr/>
+		<h3>Skills</h3>
+		<div id="skillButtons">
+			<button type="button" onclick="skillRoll(1,true)">Acrobatics</button>
+			<button type="button" onclick="skillRoll(4,false)">Animal Handling</button>
+			<button type="button" onclick="skillRoll(3,false)">Arcana</button>
+			<button type="button" onclick="skillRoll(0,false)">Athletics</button>
+			<button type="button" onclick="skillRoll(5,true)">Deception</button>
+			<button type="button" onclick="skillRoll(3,false)">History</button>
+			<button type="button" onclick="skillRoll(4,false)">Insight</button>
+			<button type="button" onclick="skillRoll(5,false)">Intimidation</button>
+			<button type="button" onclick="skillRoll(3,false)">Investigation</button>
+			<button type="button" onclick="skillRoll(4,false)">Medicine</button>
+			<button type="button" onclick="skillRoll(3,false)">Nature</button>
+			<button type="button" onclick="skillRoll(4,false)">Perception</button>
+			<button type="button" onclick="skillRoll(5,true)">Performance</button>
+			<button type="button" onclick="skillRoll(5,true)">Persuasion</button>
+			<button type="button" onclick="skillRoll(3,false)">Religion</button>
+			<button type="button" onclick="skillRoll(1,false)">Slight of Hand</button>
+			<button type="button" onclick="skillRoll(1,false)">Stealth</button>
+			<button type="button" onclick="skillRoll(4,false)">Survival</button>
+		</div>
+		<hr/>
+		<h3>Cantrips</h3>
+		<div id="cantrips">
+			<button type="button" onclick="makeAttackRoll('/r 1d20+7','/r 2d10', 0)">Firebolt</button>
+			<button type="button" onclick="openHelp('https://roll20.net/compendium/dnd5e/Fire%20Bolt#content')">?</button>
+			<button type="button" onclick="makeAttackRoll('/r 1d20+6','/r 1d4+3', 0)">Dagger</button>
+			<button type="button" onclick="makeAttackRoll('/r 1d20+6','/r 1d4+3', 0)">Dart</button>
+			<button type="button" onclick="makeAttackRoll(' ','/r 4d10')">Insect Plauge</button>
+			<button type="button" onclick="openHelp('https://roll20.net/compendium/dnd5e/Insect%20Plague#content')">?</button>
+		</div>
+		<hr/>
+		<h3>Level 1</h3>
+		<div id="level1">
+			<input id="spellsSlots1" type="number" min="0" max="4">
+			<button type="button" onclick="makeAttackRoll('/r 1d20+7','/r 2d8+1d6', 1)">Chaos Bolt</button>
+			<button type="button" onclick="openHelp('http://dnd5e.wikidot.com/spell:chaos-bolt')">?</button>
+			<button type="button" onclick="makeAttackRoll(' ',' ', 1)">Jump</button>
+			<button type="button" onclick="openHelp('https://roll20.net/compendium/dnd5e/Jump#content')">?</button>
+			<button type="button" onclick="makeAttackRoll(' ',' ', 1)">Mage Armor</button>
+			<button type="button" onclick="openHelp('https://roll20.net/compendium/dnd5e/Mage%20Armor#content')">?</button>
+		</div>
+		<hr/>
+		<h3>Level 2</h3>
+		<div id="level2">
+			<input id="spellsSlots2" type="number" min="0" max="3">
+			<button type="button" onclick="makeAttackRoll('/r 1d20+7','/r 2d8+2d6', 2)">Chaos Bolt</button>
+			<button type="button" onclick="makeAttackRoll(' ',' ', 2)">Enlarge/Reduce</button>
+			<button type="button" onclick="openHelp('https://roll20.net/compendium/dnd5e/Enlarge%20Reduce#content')">?</button>
+			<button type="button" onclick="makeAttackRoll(' ',' ', 2)">Levitate</button>
+			<button type="button" onclick="openHelp('https://roll20.net/compendium/dnd5e/Levitate#content')">?</button>
+		</div>
+		<hr/>
+		<h3>Level 3</h3>
+		<div id="level3">
+			<input id="spellsSlots3" type="number" min="0" max="3">
+			<button type="button" onclick="makeAttackRoll('/r 1d20+7','/r 2d8+3d6', 3)">Chaos Bolt</button>
+			<button type="button" onclick="makeAttackRoll(' ','/r 8d6', 3)">Fireball</button>
+			<button type="button" onclick="openHelp('https://roll20.net/compendium/dnd5e/Fireball#content')">?</button>
+			<button type="button" onclick="makeAttackRoll(' ',' ', 3)">Gaseous Form</button>
+			<button type="button" onclick="openHelp('https://roll20.net/compendium/dnd5e/Gaseous%20Form#content')">?</button>
+		</div>
+		<hr/>
+		<h3>Level 4</h3>
+		<div id="level4">
+			<input id="spellsSlots4" type="number" min="0" max="1">
+			<button type="button" onclick="makeAttackRoll('/r 1d20+7','/r 2d8+4d6', 4)">Chaos Bolt</button>
+			<button type="button" onclick="makeAttackRoll(' ','/r 9d6', 4)">Fireball</button>
+			<button type="button" onclick="makeAttackRoll(' ',' ', 4)">Dimension Door</button>
+			<button type="button" onclick="openHelp('https://roll20.net/compendium/dnd5e/Dimension%20Door#content')">?</button>
+		</div>
+		<hr/>
+		<h3>Counters</h3>
+		<div id="counters">
+			Wild Magic <input id="wildMagic" type="number" min="0" max="21">
+			Sorcerery Points <input id="sorcereryPoints" type="number" min="0" max="7">
+			Bug Staff <input id="bugStaff" type="number" min="0" max="10">
+			Temp HP <input id="tempHP" type="number" min="0" max="99">
+		</div>
+		<hr/>
+		<h3>Other References</h3>
+		<div id="references">
+			<button type="button" onclick="openHelp('https://roll20.net/compendium/dnd5e/Prestidigitation#content')">Prestidigitation</button>
+			<button type="button" onclick="openHelp('http://dnd5e.wikidot.com/spell:mold-earth')">Mold Earth</button>
+			<button type="button" onclick="openHelp('https://roll20.net/compendium/dnd5e/Mage%20Hand#content')">Mage Hand</button>
+			<button type="button" onclick="openHelp('https://roll20.net/compendium/dnd5e/Minor%20Illusion#content')">Minor Illusion</button>
+			<button type="button" onclick="openHelp('https://roll20.net/compendium/dnd5e/Staff%20of%20Swarming%20Insects#content')">Bug Staff</button>
+			<button type="button" onclick="openHelp('http://dnd5e.wikidot.com/sorcerer:wild-magic')">Wild Magic</button>
+			<button type="button" onclick="openHelp('https://roll20.net/compendium/dnd5e/Sorcerer#toc_11')">Distant Spell</button>
+			<button type="button" onclick="openHelp('https://www.wizardslaboratory.com/transmuted-spell/')">Transmuted Spell</button>
+		</div>
+		<hr/>
+	</main>
+	<footer>
+		<input type="file" name="inputfile" id="inputfile">
+		<button type="button" name="saveButton" onclick="download()">Save</button>
+	</footer>
+</body>
+</html>

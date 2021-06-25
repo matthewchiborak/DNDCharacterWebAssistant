@@ -1,0 +1,250 @@
+{
+	"Charisma": true,
+	"Dexterity": false,
+	"Intelligence": false,
+	"CurrentHP": 31,
+	"ConstitutionScore": 14,
+	"Wisdom": false,
+	"DexterityScore": 17,
+	"CurrentHitDie": 7,
+	"MaxSlots9": 0,
+	"Skills": [{
+		"skill": "Charisma",
+		"name": "Persuasion (Cha)",
+		"id": 1,
+		"proficient": true
+	}, {
+		"skill": "Charisma",
+		"name": "Intimidation (Cha)",
+		"id": 2,
+		"proficient": false
+	}, {
+		"skill": "Intelligence",
+		"name": "Investigation (Int)",
+		"id": 3,
+		"proficient": false
+	}, {
+		"skill": "Charisma",
+		"name": "Deception (Cha)",
+		"id": 4,
+		"proficient": true
+	}, {
+		"skill": "Dexterity",
+		"name": "Sleight of Hand (Dex)",
+		"id": 5,
+		"proficient": false
+	}, {
+		"skill": "Intelligence",
+		"name": "Religion (Int)",
+		"id": 6,
+		"proficient": false
+	}, {
+		"skill": "Intelligence",
+		"name": "Nature (Int)",
+		"id": 7,
+		"proficient": false
+	}, {
+		"skill": "Wisdom",
+		"name": "Survival (Wis)",
+		"id": 8,
+		"proficient": false
+	}, {
+		"skill": "Wisdom",
+		"name": "Perception (Wis)",
+		"id": 9,
+		"proficient": false
+	}, {
+		"skill": "Charisma",
+		"name": "Performance (Cha)",
+		"id": 10,
+		"proficient": true
+	}, {
+		"skill": "Intelligence",
+		"name": "Arcana (Int)",
+		"id": 11,
+		"proficient": false
+	}, {
+		"skill": "Wisdom",
+		"name": "Insight (Wis)",
+		"id": 12,
+		"proficient": false
+	}, {
+		"skill": "Dexterity",
+		"name": "Acrobatics (Dex)",
+		"id": 13,
+		"proficient": true
+	}, {
+		"skill": "Wisdom",
+		"name": "Animal Handling (Wis)",
+		"id": 14,
+		"proficient": false
+	}, {
+		"skill": "Wisdom",
+		"name": "Medicine (Wis)",
+		"id": 15,
+		"proficient": false
+	}, {
+		"skill": "Intelligence",
+		"name": "History (Int)",
+		"id": 16,
+		"proficient": false
+	}, {
+		"skill": "Dexterity",
+		"name": "Stealth (Dex)",
+		"id": 17,
+		"proficient": false
+	}, {
+		"skill": "Strength",
+		"name": "Athletics (Str)",
+		"id": 18,
+		"proficient": false
+	}],
+	"MaxSlots4": 1,
+	"MaxSlots3": 3,
+	"MaxSlots2": 3,
+	"id": 1,
+	"MaxSlots1": 4,
+	"MaxSlots8": 0,
+	"MaxSlots7": 0,
+	"MaxSlots6": 0,
+	"Constitution": true,
+	"MaxSlots5": 0,
+	"Speed": 30,
+	"AC": 13,
+	"StrengthScore": 8,
+	"CharismaScore": 18,
+	"MaxHP": 31,
+	"WisdomScore": 12,
+	"IntelligenceScore": 8,
+	"CurrentSlots3": 3,
+	"CurrentSlots2": 3,
+	"CurrentSlots1": 4,
+	"name": "Duke Danger",
+	"CurrentSlots7": 0,
+	"CurrentSlots6": 0,
+	"CurrentSlots5": 0,
+	"Counters": [{
+		"name": "Wild Magic",
+		"CurrentCount": 1,
+		"id": 1,
+		"MaxCount": 30
+	}, {
+		"name": "Sorcery Points",
+		"CurrentCount": 7,
+		"id": 2,
+		"MaxCount": 7
+	}, {
+		"name": "Bug Staff",
+		"CurrentCount": 10,
+		"id": 3,
+		"MaxCount": 10
+	}, {
+		"name": "TempHP",
+		"CurrentCount": 0,
+		"id": 4,
+		"MaxCount": 99
+	}],
+	"ProficiencyBonus": 3,
+	"CurrentSlots4": 1,
+	"MaxHitDie": 7,
+	"Attacks": [{
+		"attackroll": "\/r 1d20+7",
+		"level": 0,
+		"name": "Fire Bolt",
+		"id": 1,
+		"damageroll": "\/r 2d10"
+	}, {
+		"attackroll": "\/r 1d20+6",
+		"level": 0,
+		"name": "Dagger",
+		"id": 2,
+		"damageroll": "\/r 1d4+3"
+	}, {
+		"attackroll": "\/r 1d20+6",
+		"level": 0,
+		"name": "Dart",
+		"id": 3,
+		"damageroll": "\/r 1d4+3"
+	}, {
+		"attackroll": " ",
+		"level": 0,
+		"name": "Insect Plague",
+		"id": 4,
+		"damageroll": "\/r 4d10"
+	}, {
+		"attackroll": "\/r 1d20+7",
+		"level": 1,
+		"name": "Choas Bolt",
+		"id": 5,
+		"damageroll": "\/r 2d8+1d6"
+	}, {
+		"attackroll": "\/r 1d20+7",
+		"level": 2,
+		"name": "Choas Bolt",
+		"id": 6,
+		"damageroll": "\/r 2d8+2d6"
+	}, {
+		"attackroll": "\/r 1d20+7",
+		"level": 3,
+		"name": "Choas Bolt",
+		"id": 7,
+		"damageroll": "\/r 2d8+3d6"
+	}, {
+		"attackroll": " ",
+		"level": 3,
+		"name": "Fireball",
+		"id": 8,
+		"damageroll": "\/r 8d6"
+	}, {
+		"attackroll": " ",
+		"level": 4,
+		"name": "Dimension Door",
+		"id": 15,
+		"damageroll": "\/r 4d6"
+	}, {
+		"attackroll": " ",
+		"level": 4,
+		"name": "Choas Bolt",
+		"id": 16,
+		"damageroll": "\/r 2d8+4d6"
+	}, {
+		"attackroll": " ",
+		"level": 4,
+		"name": "Fireball",
+		"id": 17,
+		"damageroll": "\/r 9d6"
+	}, {
+		"attackroll": " ",
+		"level": 1,
+		"name": "Jump",
+		"id": 9,
+		"damageroll": " "
+	}, {
+		"attackroll": " ",
+		"level": 1,
+		"name": "Mage Armor",
+		"id": 10,
+		"damageroll": " "
+	}, {
+		"attackroll": " ",
+		"level": 2,
+		"name": "Enlarge\/Reduce",
+		"id": 12,
+		"damageroll": " "
+	}, {
+		"attackroll": " ",
+		"level": 2,
+		"name": "Levitate",
+		"id": 13,
+		"damageroll": " "
+	}, {
+		"attackroll": " ",
+		"level": 3,
+		"name": "Gas Form",
+		"id": 14,
+		"damageroll": " "
+	}],
+	"Strength": false,
+	"CurrentSlots9": 0,
+	"CurrentSlots8": 0
+}
